@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de ciclo for en JavaScript</title>
+</head>
+<body>
+    <h1>Generar una lista de los primeros 10 numeros</h1>
+    <button onclick="generarLista()">Generar Lista</button>
+    <ul id="ListaNumeros"></ul>
+     <Script>
+       function generarLista () {
+        // Obtener elemento de la lista
+        const lista = document.getElementById(`listaNumeros`);
+        // Limpiar la lista anterior
+        lista.innerHTML = ``;
+        // Usar un siclo for para hgenerar los primeros 10 numeros naturales
+        for (let i = 1; i <= 10; i++) {
+            // Crear un nuevo elemento de lista
+            const item = document.createElement(`li`);
+
+            // Establecer el contenido del elemento de la lista 
+            item.textContent = `Numero ${i}`;
+            // Añadir el nuevo elemento de la lista al elemento ul
+            lista.appendChild(item);
+          }
+       }
+     </Script>  
+</body>
+</html>
